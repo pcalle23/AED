@@ -27,25 +27,5 @@ public class Utils {
 	}
 
 	public static Map<String,Integer> maxTemperatures(TempData[] tempData) {
-		//crear mapa
-		Map <String,Integer> map = new HashTableMap <>() ;
-		//recorrer tempData
-		for(TempData k: tempData) {
-
-			//entrada no existe
-			if(!map.containsKey(k.getLocation())) {
-				map.put(k.getLocation(), k.getTemperature());
-			}
-
-			//entrada existe 
-			if(map.containsKey(k.getLocation())) {
-
-				//si temperatura mayor que existente
-				if(k.getTemperature() > map.get(k.getLocation())) {
-					map.put(k.getLocation(), k.getTemperature());
-				}
-			}
-		}
-		return map;
-	}
+		
 }
